@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
 
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <style>
         body,
         html {
@@ -112,25 +114,24 @@
     <div id="weatherdisplay"></div>
     <br>
 
-    <!--Search form & Dropbox-->
-    <div class="form-group row">
-        <div class="col-10">
-            <form>
-                Search Orlando!<br>
-                <input type="text" id="search-txt" size=100%>
-                <input type="submit" value="Search" id="search-btn">
-            </form>
-        </div>
-        <div class="COL-2">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Dropdown
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                <button class="dropdown-item" type="button">Action</button>
-                <button class="dropdown-item" type="button">Another action</button>
-                <button class="dropdown-item" type="button">Something else here</button>
-            </div>
+    <!--Search form-->
+
+    <form id="center-test">
+        <h4><strong>Search Orlando!</strong></h4>
+        <input type="text" id="search-txt" size=100%>
+        <input type="submit" value="Search" id="search-btn">
+    </form>
+
+
+    <div class="COL-2">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <button class="dropdown-item" type="button">Action</button>
+            <button class="dropdown-item" type="button">Another action</button>
+            <button class="dropdown-item" type="button">Something else here</button>
         </div>
     </div>
 
