@@ -1,6 +1,3 @@
-// var rnOneId = document.getElementById("rnOne");
-// var weatherdisplay = document.getElementById("weatherdisplay");
-
 // Yelp URL
 // GET https://api.yelp.com/v3/businesses/search
 // Client ID: Hh8RLH6Ycy-XkbewRt6LqQ
@@ -33,13 +30,13 @@ $("#search-btn").on("click", function(){
             container.append("<div id='answerdiv-"+divid+"'>  </div>")
             $("#answerdiv-" +divid).append($("<img />").attr("id", "imagetag" + divid))
             // Creates and displays images
-            $("#imagetag" +divid).attr("src", response.businesses[i].image_url)
+            $("#imagetag" +divid).attr("src", response.businesses[i].image_url).css("width", "400px").css("height","300px").css("text-align","center")
             // Creates and displays business names
-            $("#answerdiv-"+divid).append("<p id='namediv" + divid + "'>" + response.businesses[i].name + "</p>")
+            $("#answerdiv-"+divid).append("<p id='namediv" + divid + "'>" + response.businesses[i].name + "</p>").css("text-align","center")
             // Creates and displays business locations
-            $("#answerdiv-"+divid).append("<p id='locationdiv" + divid + "'>" + response.businesses[i].location.address1 + "</p>")
+            $("#answerdiv-"+divid).append("<p id='locationdiv" + divid + "'>" + response.businesses[i].location.address1 + "</p>").css("text-align","center")
             // Creates and displays business phone numbers
-            $("#answerdiv-"+divid).append("<p id='phonediv" + divid + "'>" + response.businesses[i].phone + "</p>")
+            $("#answerdiv-"+divid).append("<p id='phonediv" + divid + "'>" + response.businesses[i].phone + "</p>").css("text-align","center")
             }   
         })               
 })
@@ -53,5 +50,5 @@ $.ajax({
 }).then(function(response) {
     console.log("---------------------Weather----------------------------")
     console.log(response)
-    $("#weatherdisplay").text("Current Temp: " + response.main.temp + "," + " Current Humidity: " + response.main.humidity + "%" + "," + " Current Weather: " + response.weather[0].description)
+    $("#weatherdisplay").text("Current Temp: " + response.main.temp + "\xB0" + "," + " Current Humidity: " + response.main.humidity + "%" + "," + " Current Weather: " + response.weather[0].description).css("text-align","center")
 })
