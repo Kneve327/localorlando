@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body,
 html {
     height: 100%;
@@ -67,5 +68,10 @@ header .imageholder{
 
 .wn-footer a {
     color: yellow;
+=======
+#imagetag0 {
+    width: 200px;
+    height: 200px;
+>>>>>>> dfd0ff85df70d6caa0a4b5d516ac47b7c81b9156
 }
 
