@@ -1,5 +1,77 @@
+<<<<<<< HEAD
+body,
+html {
+    height: 100%;
+}
+
+ .jumbotron {
+    background-color: white;
+    height: 200px; 
+}
+
+header .logo{float: left;}
+
+header .imageholder{
+    float: right;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("assets/images/Orlando-view.png");
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax1 {
+    /* The image used */
+    background-image: url("assets/images/Orlando-view.png");
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("assets/images/Orlando-view.png");
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Footer */
+.wn-footer {
+    padding: 2.5rem 0;
+    text-align: center;
+    color: white;
+    background-color: #607D8B;
+    border-top: .05rem solid #e5e5e5;
+}
+
+.wn-footer a {
+    color: yellow;
+=======
 #imagetag0 {
     width: 200px;
     height: 200px;
+>>>>>>> dfd0ff85df70d6caa0a4b5d516ac47b7c81b9156
 }
 
