@@ -50,5 +50,5 @@ $.ajax({
 }).then(function(response) {
     console.log("---------------------Weather----------------------------")
     console.log(response)
-    $("#weatherdisplay").text("Current Temp: " + response.main.temp + "\xB0" + "," + " Current Humidity: " + response.main.humidity + "%" + "," + " Current Weather: " + response.weather[0].description).css("text-align","center")
+    $("#weatherdisplay").text("Current Temp: " + response.main.temp + "\xB0" + "," + " Current Humidity: " + response.main.humidity + "%" + "," + " Current Weather: " + response.weather[0].description).css("text-align","center").css("font-weight","bold")
 })
