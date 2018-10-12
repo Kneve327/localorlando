@@ -40,7 +40,7 @@ $("#search-btn").on("click", function(){
             // Creates and displays images
             $("#imagetag" +divid).attr("src", response.businesses[i].image_url).css("width", "400px").css("height","300px").css("text-align","center")
             // Creates and displays business names
-            $("#answerdiv-"+divid).append("<p id='namediv" + divid + "'>" + response.businesses[i].name + "</p>").css("text-align","center")
+            $("#answerdiv-"+divid).append("<button id='namediv" + divid + "'>" + response.businesses[i].name + "</button>")
             // Creates and displays business locations
             $("#answerdiv-"+divid).append("<p id='locationdiv" + divid + "'>" + response.businesses[i].location.address1 + "</p>").css("text-align","center")
             // Creates and displays business phone numbers
