@@ -7,9 +7,17 @@
 var token = "Bearer B8FOKrLpb_-yezrVAPe2XPClogB8Lj3flBv3LVYYOo6t4B7tSBMkzwxPqfE7yIja2dW6S1Ot5HXdQ3yvRBZte7k-JHPVhjlow3f4z10N2PiDsEvEiQgvKTZgcay2W3Yx"
 var yelpSearchURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search"
 
+var selectionObject;
+
+// Clear Results
+$("#clear-results").on("click", function() {
+    $("#container").empty()
+ })
+
 // Search Function
 $("#search-btn").on("click", function(){
     event.preventDefault()
+    $("#container").empty()
     var userInput = $("#search-txt").val().trim()
     var requestOBJ = {
         url: yelpSearchURL,
@@ -37,8 +45,41 @@ $("#search-btn").on("click", function(){
             $("#answerdiv-"+divid).append("<p id='locationdiv" + divid + "'>" + response.businesses[i].location.address1 + "</p>").css("text-align","center")
             // Creates and displays business phone numbers
             $("#answerdiv-"+divid).append("<p id='phonediv" + divid + "'>" + response.businesses[i].phone + "</p>").css("text-align","center")
-            }   
-        })               
+            // Creates and displays a button and assigns data attributes
+            $("#answerdiv-"+divid).append($("<button>").text("Add").attr("data-name", response.businesses[i].name).attr("data-location", response.businesses[i].location.address1).attr("data-phone", response.businesses[i].phone))
+            }
+            
+            $("button").on("click", function(event) {
+                event.preventDefault();
+
+                $("#add-modal").modal()
+                var selectionName = $(this)[0].dataset.name
+                var selectionLocation = $(this)[0].dataset.location
+                var selectionPhone = $(this)[0].dataset.phone
+                
+                console.log(selectionName)
+                console.log(selectionLocation)
+                console.log(selectionPhone)
+
+                $("#name-input").val(selectionName)
+                $("#address-input").val(selectionLocation)
+                $("#phone-input").val(selectionPhone)    
+
+                var selection = {
+                    name: selectionName,
+                    address: selectionLocation,
+                    phone: selectionPhone
+                }
+
+                selectionObject = selection;
+            })
+        })
+})
+
+$("#modal-add-button").on("click", function(event) {
+    event.preventDefault();
+    
+    console.log(selectionObject)
 })
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
