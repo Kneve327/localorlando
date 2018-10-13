@@ -35,18 +35,18 @@ $("#search-btn").on("click", function(){
             var container = $("#container")
             // Assigns number to each individual divid
             var divid = i;
-            container.append("<div id='answerdiv-"+divid+"'>  </div>")
+            container.append("<div id='answerdiv-"+divid+"'>  </div>")//.addClass("shadow p-3 mb-5 rounded")
             $("#answerdiv-" +divid).append($("<img />").attr("id", "imagetag" + divid))
             // Creates and displays images
             $("#imagetag" +divid).attr("src", response.businesses[i].image_url).css("width", "400px").css("height","300px").css("text-align","center")
             // Creates and displays business names
-            $("#answerdiv-"+divid).append("<button id='namediv" + divid + "'>" + response.businesses[i].name + "</button>")
+            $("#answerdiv-"+divid).append("<p id='namediv" + divid + "'>" + response.businesses[i].name + "</p>")
             // Creates and displays business locations
             $("#answerdiv-"+divid).append("<p id='locationdiv" + divid + "'>" + response.businesses[i].location.address1 + "</p>").css("text-align","center")
             // Creates and displays business phone numbers
             $("#answerdiv-"+divid).append("<p id='phonediv" + divid + "'>" + response.businesses[i].phone + "</p>").css("text-align","center")
             // Creates and displays a button and assigns data attributes
-            $("#answerdiv-"+divid).append($("<button>").text("Add").attr("data-name", response.businesses[i].name).attr("data-location", response.businesses[i].location.address1).attr("data-phone", response.businesses[i].phone))
+            $("#answerdiv-"+divid).append($("<button class='btn btn-primary'>").text("Add").attr("data-name", response.businesses[i].name).attr("data-location", response.businesses[i].location.address1).attr("data-phone", response.businesses[i].phone))
             }
             
             $("button").on("click", function(event) {
