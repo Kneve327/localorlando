@@ -53,3 +53,305 @@
     display: block !important;
     margin: 20px auto 20px auto !important;
 }
+
+
+/* Button hover effect */
+button {
+    background-color: teal !important;
+}
+
+button:hover {
+    box-shadow: 0 0 3pt 2pt blue;
+}
+
+#search-btn {
+    background-color: teal !important;
+}
+
+#search-btn:hover {
+    box-shadow: 0 0 3pt 2pt blue;   
+}
+
+#clear-results {
+    background-color: teal !important;
+}
+
+#clear-results:hover {
+    box-shadow: 0 0 3pt 2pt blue;   
+}
+
+/* Index card effect for search results (0 - 9) */
+img { 
+    border: 2px solid teal;
+    border-radius: 25px;
+ }
+
+#answerdiv-0 {
+    background-color: white;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 30px;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 30px 10px black;
+}
+#namediv0 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+    font-weight: bolder;
+}
+#locationdiv0 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+#phonediv0 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+
+#answerdiv-1 {
+    background-color: white;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 30px;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 30px 10px black;
+}
+#namediv1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+    font-weight: bolder;
+}
+#locationdiv1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+#phonediv1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+
+#answerdiv-2 {
+    background-color: white;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 30px;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 30px 10px black;
+}
+#namediv2 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+    font-weight: bolder;
+}
+#locationdiv2 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+#phonediv2 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+
+#answerdiv-3 {
+    background-color: white;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 30px;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 30px 10px black;
+}
+#namediv3 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+    font-weight: bolder;
+}
+#locationdiv3 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+#phonediv3 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+
+#answerdiv-4 {
+    background-color: white;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 30px;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 30px 10px black;
+}
+#namediv4 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+    font-weight: bolder;
+}
+#locationdiv4 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+#phonediv4 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+
+#answerdiv-5 {
+    background-color: white;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 30px;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 30px 10px black;
+}
+#namediv5 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+    font-weight: bolder;
+}
+#locationdiv5 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+#phonediv5 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+
+#answerdiv-6 {
+    background-color: white;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 30px;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 30px 10px black;
+}
+#locationdiv6 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+#namediv6 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+    font-weight: bolder;
+}
+#phonediv6 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+
+#answerdiv-7 {
+    background-color: white;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 30px;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 30px 10px black;
+}
+#namediv7 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+    font-weight: bolder;
+}
+#locationdiv7 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+#phonediv7 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+
+#answerdiv-8 {
+    background-color: white;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 30px;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 30px 10px black;
+}
+#namediv8 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+    font-weight: bolder;
+}
+#locationdiv8 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+#phonediv8 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+
+#answerdiv-9 {
+    background-color: white;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 30px;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 30px 10px black;
+}
+#namediv9 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+    font-weight: bolder;
+}
+#locationdiv9 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
+#phonediv9 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+}
