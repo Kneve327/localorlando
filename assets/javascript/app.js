@@ -60,7 +60,7 @@ $("#search-btn").on("click", function(){
             // Creates and displays business phone numbers
             $("#answerdiv-"+divid).append("<p id='phonediv" + divid + "'>" + response.businesses[i].phone + "</p>").css("text-align","center")
             // Creates and displays a button and assigns data attributes
-            $("#answerdiv-"+divid).append($("<button>").text("Add").addClass("results-button").attr("data-name", response.businesses[i].name).attr("data-location", response.businesses[i].location.address1).attr("data-phone", response.businesses[i].phone))
+            $("#answerdiv-"+divid).append($("<button>").text("Add").addClass("results-button btn btn-primary").attr("data-name", response.businesses[i].name).attr("data-location", response.businesses[i].location.address1).attr("data-phone", response.businesses[i].phone))
             }
             
             $(".results-button").on("click", function(event) {

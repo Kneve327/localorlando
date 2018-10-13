@@ -56,9 +56,6 @@
 
 
 /* Button hover effect */
-.close {
-    background-color: teal;
-}
 
 button {
     background-color: teal !important;
@@ -82,6 +79,10 @@ button:hover {
 
 #clear-results:hover {
     box-shadow: 0 0 3pt 2pt blue;   
+}
+
+.close {
+    background-color: white !important;
 }
 
 /* Index card effect for search results (0 - 9) */
