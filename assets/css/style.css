@@ -403,6 +403,26 @@ img {
     padding: 1px;
 }
 
+/* Break Points */
+@media only screen and (max-width: 480px) {
+    .dropdown-toggle {
+        margin-right: 30%;
+        margin-left: 37%;
+    }
+    #search-txt {
+        width: 50%;
+    }
+    .pic-description {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    .pic-description-small {
+        display: none;
+    }
+}
+
 #center-test {
 text-align: center;
 }
