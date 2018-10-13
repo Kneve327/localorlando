@@ -114,8 +114,6 @@ img {
     box-shadow: 10px 10px 30px 10px black;
 }
 
-#imagetag0 {}
-
 #namediv0 {
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
@@ -403,18 +401,6 @@ img {
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1px;
-}
-
-.wn-footer {
-    padding: 2.5rem 0;
-    text-align: center;
-    color: white;
-    background-color: gray;
-    border-top: .05rem solid #e5e5e5;
-}
-
-.wn-footer a {
-    color: yellow;
 }
 
 #center-test {
