@@ -9,6 +9,20 @@ var yelpSearchURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3
 
 var selectionObject;
 
+ // Initialize Firebase
+ var config = {
+    apiKey: "AIzaSyDDbWbPqd-sa7KIMz2Lc2IEIVg_yaOGMAU",
+    authDomain: "project-1-local-orlando.firebaseapp.com",
+    databaseURL: "https://project-1-local-orlando.firebaseio.com",
+    projectId: "project-1-local-orlando",
+    storageBucket: "project-1-local-orlando.appspot.com",
+    messagingSenderId: "189441778490"
+  };
+
+  firebase.initializeApp(config);
+
+  var database = firebase.database();
+
 // Clear Results
 $("#clear-results").on("click", function() {
     $("#container").empty()
@@ -40,16 +54,16 @@ $("#search-btn").on("click", function(){
             // Creates and displays images
             $("#imagetag" +divid).attr("src", response.businesses[i].image_url).css("width", "400px").css("height","300px").css("text-align","center")
             // Creates and displays business names
-            $("#answerdiv-"+divid).append("<button id='namediv" + divid + "'>" + response.businesses[i].name + "</button>")
+            $("#answerdiv-"+divid).append("<p id='namediv" + divid + "'>" + response.businesses[i].name + "</p>").css("text-align","center")
             // Creates and displays business locations
             $("#answerdiv-"+divid).append("<p id='locationdiv" + divid + "'>" + response.businesses[i].location.address1 + "</p>").css("text-align","center")
             // Creates and displays business phone numbers
             $("#answerdiv-"+divid).append("<p id='phonediv" + divid + "'>" + response.businesses[i].phone + "</p>").css("text-align","center")
             // Creates and displays a button and assigns data attributes
-            $("#answerdiv-"+divid).append($("<button>").text("Add").attr("data-name", response.businesses[i].name).attr("data-location", response.businesses[i].location.address1).attr("data-phone", response.businesses[i].phone))
+            $("#answerdiv-"+divid).append($("<button>").text("Add").addClass("results-button").attr("data-name", response.businesses[i].name).attr("data-location", response.businesses[i].location.address1).attr("data-phone", response.businesses[i].phone))
             }
             
-            $("button").on("click", function(event) {
+            $(".results-button").on("click", function(event) {
                 event.preventDefault();
 
                 $("#add-modal").modal()
@@ -68,7 +82,7 @@ $("#search-btn").on("click", function(){
                 var selection = {
                     name: selectionName,
                     address: selectionLocation,
-                    phone: selectionPhone
+                    phone: selectionPhone,
                 }
 
                 selectionObject = selection;
@@ -79,7 +93,38 @@ $("#search-btn").on("click", function(){
 $("#modal-add-button").on("click", function(event) {
     event.preventDefault();
     
-    console.log(selectionObject)
+    var selectionTime = $("#selected-time").val();
+    
+    selectionObject.time = selectionTime;
+    
+    database.ref().push(selectionObject);
+
+    console.log(selectionObject.name);
+    console.log(selectionObject.address);
+    console.log(selectionObject.phone);
+    console.log(selectionObject.time);
+})
+
+database.ref().on("child_added", function(childSnapshot) {
+    console.log(childSnapshot.val());
+
+    var newName = childSnapshot.val().name
+    var newLocation = childSnapshot.val().address
+    var newPhone = childSnapshot.val().phone
+    var newTime = childSnapshot.val().time
+
+    console.log(newName)
+    console.log(newLocation)
+    console.log(newPhone)
+    console.log(newTime)
+    
+    // Create a new row
+    var newRow = $("<span>").text(newTime + newName + newLocation + newPhone);
+    
+    // Append the new row to the table
+    $("#itinerary").append(newRow);
+    
+    //<button class="dropdown-item" type="button">Action</button>
 })
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
