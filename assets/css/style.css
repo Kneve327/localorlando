@@ -405,16 +405,24 @@ img {
     padding: 1px;
 }
 
-.wn-footer {
-    padding: 2.5rem 0;
-    text-align: center;
-    color: white;
-    background-color: gray;
-    border-top: .05rem solid #e5e5e5;
+/* Break Points */
+@media only screen and (max-width: 480px) {
+    .dropdown-toggle {
+        margin-right: 30%;
+        margin-left: 37%;
+    }
+    #search-txt {
+        width: 50%;
+    }
+    .pic-description {
+        display: none;
+    }
 }
 
-.wn-footer a {
-    color: yellow;
+@media only screen and (min-width: 481px) {
+    .pic-description-small {
+        display: none;
+    }
 }
 
 #center-test {
