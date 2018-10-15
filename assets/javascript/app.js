@@ -118,8 +118,11 @@ database.ref().on("child_added", function(childSnapshot) {
     console.log(newPhone)
     console.log(newTime)
     
-    // Create a new row
-    var newRow = $("<span>").text(newTime + newName + newLocation + newPhone);
+    if (isNaN(newPhone)) {
+        display: none;
+    } else {
+        var newRow = $("<span>").text(newTime + newName + newLocation + newPhone);
+    }
     
     // Append the new row to the table
     $("#itinerary").append(newRow);
