@@ -39,6 +39,7 @@ $("#search-btn").on("click", function(){
         headers: {"Authorization": token}
     }
     
+    // Yelp API call
     $.ajax(requestOBJ)
         .done(function(response) {
             console.log("User Input = " + userInput);
@@ -49,7 +50,7 @@ $("#search-btn").on("click", function(){
             var container = $("#container")
             // Assigns number to each individual divid
             var divid = i;
-            container.append("<div id='answerdiv-"+divid+"'>  </div>")//.addClass("shadow p-3 mb-5 rounded")
+            container.append("<div id='answerdiv-"+divid+"'>  </div>")//.addClass("shadow p-3 mb-5 round
             $("#answerdiv-" +divid).append($("<img />").attr("id", "imagetag" + divid))
             // Creates and displays images
             $("#imagetag" +divid).attr("src", response.businesses[i].image_url).css("width", "100%").css("height","100%").css("text-align","center")
@@ -63,6 +64,7 @@ $("#search-btn").on("click", function(){
             $("#answerdiv-"+divid).append($("<button>").text("Add").addClass("results-button btn btn-primary").attr("data-name", response.businesses[i].name).attr("data-location", response.businesses[i].location.address1).attr("data-phone", response.businesses[i].phone))
             }
             
+            // Results 'Add' button submit and modal launch
             $(".results-button").on("click", function(event) {
                 event.preventDefault();
 
@@ -90,6 +92,7 @@ $("#search-btn").on("click", function(){
         })
 })
 
+// Modal 'Add' button submit and Firebase push
 $("#modal-add-button").on("click", function(event) {
     event.preventDefault();
     
@@ -105,6 +108,7 @@ $("#modal-add-button").on("click", function(event) {
     console.log(selectionObject.time);
 })
 
+// Firebase pull and sort
 database.ref().orderByChild("time").on("child_added", function(childSnapshot) {
 
     console.log(childSnapshot.val())
@@ -119,6 +123,7 @@ database.ref().orderByChild("time").on("child_added", function(childSnapshot) {
     console.log(newPhone)
     console.log(newTime)
     
+    // Add selections to itinerary
     if (isNaN(newPhone)) {
         newPhone = 0;
     } else {
@@ -137,8 +142,7 @@ $("#clear-itinerary").on("click", function() {
 })
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
-// Weather API
-
+// Weather API call
 $.ajax({
     url: "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?q=orlando&units=imperial&APPID=8ec6360d565ef411810326e9da63398d",
     method: "GET"
