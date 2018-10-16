@@ -93,7 +93,7 @@ $("#search-btn").on("click", function(){
 $("#modal-add-button").on("click", function(event) {
     event.preventDefault();
     
-    var selectionTime = $("#selected-time").val();
+    selectionTime = $("#selected-time").val().trim();
     
     selectionObject.time = selectionTime;
     
@@ -105,8 +105,9 @@ $("#modal-add-button").on("click", function(event) {
     console.log(selectionObject.time);
 })
 
-database.ref().on("child_added", function(childSnapshot) {
-    console.log(childSnapshot.val());
+database.ref().orderByChild("time").on("child_added", function(childSnapshot) {
+
+    console.log(childSnapshot.val())
 
     var newName = childSnapshot.val().name
     var newLocation = childSnapshot.val().address
@@ -118,13 +119,21 @@ database.ref().on("child_added", function(childSnapshot) {
     console.log(newPhone)
     console.log(newTime)
     
-    // Create a new row
-    var newRow = $("<span>").text(newTime + newName + newLocation + newPhone);
-    
-    // Append the new row to the table
-    $("#itinerary").append(newRow);
-    
-    //<button class="dropdown-item" type="button">Action</button>
+    if (isNaN(newPhone)) {
+        newPhone = 0;
+    } else {
+        var newRow = $("<tr>").append(
+            $("<th>").addClass("bold-row").text(newTime),
+            $("<td>").text(newName),
+            $("<td>").text(newLocation),
+            $("<td>").text(newPhone)
+        )
+    $("#itinerary-table > tbody").append(newRow);
+    }
+})
+
+$("#clear-itinerary").on("click", function() {
+    database.ref().remove();
 })
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
