@@ -34,6 +34,7 @@
 
     <!--Weather-->
     <div id="weatherdisplay"></div>
+      
     <br>
 
     <!--Search form-->
@@ -43,25 +44,30 @@
         <input type="text" id="search-txt" size=100%>
         <input type="submit" value="Search" class="btn btn-primary" id="search-btn">
         <input type="submit" value="Clear" class="btn btn-primary" id="clear-results">
-
-        <div class="col-12 pt-2">
+        <div class="col-md-12">
             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" style="margin: auto">
                 Itinerary
             </button>
-            <div class="dropdown-menu" id="itinerary" aria-labelledby="dropdownMenu">
-                Your itinerary for <br />
-                <!-- <button class="dropdown-item" type="button">Another action</button> -->
-                <!-- <button class="dropdown-item" type="button">Something else here</button> -->
-    
-            </div>
+        
+        <div class="dropdown-menu" id="itinerary" aria-labelledby="dropdownMenu">
+            <table class="table table-striped" id="itinerary-table">
+                <caption class="pl-2">*Refresh browser window to sort</caption>
+                <thead>
+                    <tr class="table-warning">
+                        <th scope="col" id="itinerary-title">Your Itinerary For:</th>
+                        <th scope="col"><input class="form-control" type="date" id="selected-date" value="2018-10-16" min="2018-01-01" max="2020-12-31"></th>
+                        <th scope="col"><input type="submit" value="Clear" class="btn btn-primary" id="clear-itinerary"></th>
+                        <th></th>
+                    </tr>
+                </thead>
+            <tbody></tbody>
+            </table>
         </div>
-
+        </div>
     </form>
 
-    </form>
-
-    <br>
+    <br />
 
     <!--Yelp-->
     <div id="container">
@@ -71,7 +77,7 @@
 
     <!--Parallax-->
     <div class="downtown-pic" style="height:130px;background-color:rgb(27, 30, 219);font-size:26px;text-align:center;border-top:3px solid white;">
-        <a style="color:black;" href="http://www.downtownorlando.com/"><strong>Downtown Orlando</strong></a>
+        <a style="color:black;" href="http://www.downtownorlando.com/" target="_blank"><strong>Downtown Orlando</strong></a>
         <p style="font-size:20px; color:white;">Bustling Downtown Orlando is where you can ALWAYS find something to do.
             Enjoy a night out with food and drink, stop by one of the many music venues/clubs for a breathtaking show,
             or even just walk around and bask in the excitement. Sometimes, no plan at all is the best plan to have.</p>
@@ -80,7 +86,7 @@
     <div class="parallax"></div>
 
     <div class="beach-pic" style="height:130px;background-color:rgb(219, 166, 96);font-size:26px;text-align:center">
-        <a style="color:rgb(7, 123, 255);" href="https://www.cityofcocoabeach.com/"><strong>Cocoa Beach</strong></a>
+        <a style="color:rgb(7, 123, 255);" href="https://www.cityofcocoabeach.com/" target="_blank"><strong>Cocoa Beach</strong></a>
         <p style="font-size:20px;"><strong>Let's face it, even an Orlando vacation can become hectic. With so much to
                 do and see, there is one place every Orlando Local goes to unwind: Cocoa Beach. With warm sand,
                 beautiful sunshine and a pier home to some of the best food and drink around, nothing beats getting
@@ -90,7 +96,7 @@
     <div class="parallax1"></div>
 
     <div class="sports-pic" style="height:130px;background-color:rgb(87, 11, 102);font-size:26px;text-align:center">
-        <a style="color:rgb(226, 212, 17);" href="https://www.orlandocitysc.com/"><strong>Local Sports</strong></a>
+        <a style="color:rgb(226, 212, 17);" href="https://www.visitorlando.com/events/sporting-events/" target="_blank"><strong>Local Sports</strong></a>
         <p style="font-size:20px; color:white;">Whether or not you're into sports, an Orlando City Soccer game is truly
             a unique and exciting event! From the adrenaline-fueled action to the ice-cold refreshments, only one thing
             stands above all the excitement: the roaring fans cheering for Orlando's favorite home team.</p>
@@ -99,7 +105,7 @@
     <div class="parallax2"></div>
 
     <div class="themepark-pic" style="height:100px;background-color:papayawhip;font-size:26px;text-align:center">
-        <a style="color:rgb(197, 10, 125)" href="https://disneyworld.disney.go.com/"><strong>Walt Disney World</strong></a>
+        <a style="color:rgb(197, 10, 125)" href="https://disneyworld.disney.go.com/" target="_blank"><strong>Walt Disney World</strong></a>
         <p style="font-size:20px;"><strong>Disney World is home to the planet's most iconic characters and rides! From
                 the excitement of Magic Kingdom to the cultural experience of Epcot, there are memories waiting to be
                 made for both the young & old!</strong></p>
@@ -110,10 +116,9 @@
     <!-- Start of footer -->
     <footer class="footer">
         <div class="two-toned-footer-color"></div>
-        <p class="text-muted text-muted-footer text-center">
-            &copy; Copyright
+        <p class="text-muted text-muted-footer text-center mt-2">
+            Copyright&copy;&nbsp;2018&nbsp;Local&nbsp;Orlando
         </p>
-        <p class="contactUs text-center"><a href="#"><strong>Contact Us</strong></p></a>
         <p class="backToTop text-center"><a href="#"><strong>Back to top</strong></a></p>
     </footer>
     <!-- End of footer -->

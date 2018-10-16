@@ -93,6 +93,14 @@ button:hover {
     box-shadow: 0 0 3pt 2pt blue;
 }
 
+#clear-itinerary {
+    background-color: teal !important;
+}
+
+#clear-itinerary:hover {
+    box-shadow: 0 0 3pt 2pt blue;
+}
+
 .close {
     background-color: white !important;
 }
@@ -407,6 +415,12 @@ img {
 text-align: center;
 }
 
+/* Miscellaneous styling */
+#itinerary-title {
+    font-size: 20px;
+}
+
+/* Parallax styling */
 .parallax {
     /* The image used */
     background-image: url('../images/downtown.jpg');
